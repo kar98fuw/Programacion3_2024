@@ -45,14 +45,14 @@ include 'bd/conexion.php';
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Libros disponibles</h1>
+                        <h1 class="text-white font-weight-bold">Autores </h1>
                         <hr class="divider" />
                     </div>
 
                     <?php
 
                     $libreria = new  DBGGestionLibreria();
-                    $libros = $libreria->getLibros();
+                    $libros = $libreria->getAutores();
                     //var_dump($libros);
 
                    
@@ -98,12 +98,12 @@ include 'bd/conexion.php';
 <div class="card-container">
     <?php foreach ($libros as $libro): ?>
         <div class="card">
-            <img src="img/book-icon-clipart-transparent-background-free-png.webp">
+            <img src="img/pngtree-cyber-man-icon-isolated-on-abstract-background-png-image_1779361.jpg">
             <div class="container">
-                <h4><b><?php echo $libro['titulo']; ?></b></h4>
-                <p>Precio: <?php echo $libro['precio']; ?></p>
-                <p>Categoria: <?php echo $libro['tipo']; ?></p>
-                <p>Año de Publicación: <?php echo $libro['fecha_pub']; ?></p>
+                <h4><b><?php echo $libro['nombre']; ?></b></h4>
+                <p>Pais: <?php echo $libro['pais']; ?></p>
+                <p>Direccion: <?php echo $libro['direccion']; ?></p>
+                <p>telefono: <?php echo $libro['telefono']; ?></p>
             </div>
         </div>
     <?php endforeach; ?>
@@ -111,21 +111,12 @@ include 'bd/conexion.php';
 
 
 
-
-
-
-
-
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-       <br>
-                   
-        
+       
+                       
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
